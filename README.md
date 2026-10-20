@@ -47,7 +47,7 @@ Most published VLAs have billions of parameters and are trained on expensive rob
 | O3 | Record a LeRobot dataset of pick-and-place demonstrations and publish it | ✅ Done (39 episodes) |
 | O4 | Fine-tune SmolVLA locally on an RTX 3050 | ✅ Run 1 complete (20k steps); Run 2 status not verified |
 | O5 | Verify the model offline against recorded demonstrations | ✅ Done for Run 1 (qualitative, episode 0) |
-| O6 | Execute the policy on the real robot | 🟡 Partial: reaches the cube, does not grasp |
+| O6 | Execute the policy on the real robot | 🟡 Reported: performs pick and place (success rate not measured) |
 | O7 | Measure real-world success rate with a repeatable protocol | ⏳ Planned ([protocol](docs/evaluation.md)) |
 
 ## Hardware
@@ -150,7 +150,7 @@ All diagrams, with explanations: [docs/system-architecture.md](docs/system-archi
 | Run 1 loss | 🟡 Reported, log not archived here | ≈ 0.04 near the end of training |
 | Run 1 offline check | 🟡 Reported, script output not archived here | Predictions within ≈ 2–5 units of recorded actions on every joint for episode 0; phase timing matched |
 | Run 2 training (host, LeRobot 0.6.2) | 🟡 Partially verified | Started; ≈ 0.53 s/step, ≈ 2.5 GB GPU, loss ≈ 0.09 at step 7,500; completion **not verified** |
-| Real-robot inference | 🟡 Partial | Arm reaches and hovers over the cube; no grasp |
+| Real-robot inference | 🟡 Reported | Pick and place performed on the real robot (author-reported); success rate not yet measured |
 | Real-world success rate | ❌ Not measured | — |
 
 > **Training loss is not task success.** A loss of 0.04 means the model imitates the recorded actions well *on the training distribution*. It says nothing about closed-loop behaviour when small errors compound, lighting changes, or extra objects appear. See [learning/evaluation-metrics.md](learning/evaluation-metrics.md).

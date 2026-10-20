@@ -16,7 +16,7 @@ Every issue below was encountered in this project. Each entry gives the symptoms
 | [T8](#t8-web-ui-cannot-resume-training) | Web UI cannot resume training | ✅ Workaround verified |
 | [T9](#t9-model-runs-but-the-arm-does-not-move) | Model runs, arm does not move | ✅ Verified |
 | [T10](#t10-arm-creeps-or-hovers-near-rest) | Arm creeps or hovers near rest | ✅ Verified (bridge v2) |
-| [T11](#t11-arm-reaches-the-cube-but-does-not-grasp) | Arm reaches but does not grasp | ⏳ Open |
+| [T11](#t11-arm-reaches-the-cube-but-does-not-grasp) | Arm reaches but does not grasp | 🟡 Reportedly resolved (cause not recorded) |
 | [T12](#t12-host-training-fails-dataset-format-or-camera-names) | Host training fails (format / camera names) | 🟡 Reported fixed |
 | [T13](#t13-resume-ends-immediately-with-end-of-training) | Resume ends immediately | ✅ Expected behaviour |
 | [T14](#t14-torchcodec-not-available-warning) | `torchcodec` not available warning | ℹ️ Harmless |
