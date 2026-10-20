@@ -108,4 +108,4 @@ Use [experiments/evaluation-results/trial_log_template.csv](../experiments/evalu
 | Real-world trials run under this protocol | 0 |
 | Grasp success | Not measured |
 | Place success | Not measured |
-| Qualitative (3 informal attempts) | Reach achieved in attempt 3; no grasp |
+| Qualitative (informal attempts) | Pick and place demonstrated (author-reported); no trial counts recorded |

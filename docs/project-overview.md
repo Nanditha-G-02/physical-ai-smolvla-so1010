@@ -36,7 +36,7 @@ A person moves the **leader** arm by hand. A custom ROS 2 node (`bridge.py`) rea
 | Offline check of Run 1 | ✅ | 🟡 | Reported good agreement on episode 0 |
 | v2.1 → v3.0 conversion for host | ✅ (earlier) | 🟡 | Re-run on a fresh download is pending |
 | SmolVLA training on host (Run 2) | ✅ | ❌ | Completion not verified |
-| Inference through web UI + `inference_bridge.py` | ✅ | 🟡 | Reaches the cube; no grasp |
+| Inference through web UI + `inference_bridge.py` | ✅ | 🟡 | Pick and place demonstrated; success rate not yet measured |
 | Inference with `lerobot-rollout` on host | ⏳ | ❌ | Planned |
 | Real-world success rate | ⏳ | ❌ | Protocol written, not run |
 

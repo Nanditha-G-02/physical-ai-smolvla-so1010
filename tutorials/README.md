@@ -11,6 +11,6 @@ Numbered, hands-on walkthroughs. Each command block is labelled **[HOST]** (Ubun
 | 05 | [Inspect and convert the dataset](05-inspect-and-convert-dataset.md) | ✅ Download/inspect; conversion flags pending |
 | 06 | [Train SmolVLA](06-train-smolvla.md) | 🟡 Run 2 command reconstructed |
 | 07 | [Resume and manage checkpoints](07-resume-and-manage-checkpoints.md) | ✅ Resume; 🔧 recovery reconstructed |
-| 08 | [Run inference](08-run-inference.md) | 🟡 Reaches the cube; no grasp yet |
+| 08 | [Run inference](08-run-inference.md) | ✅ Pick and place demonstrated; success rate not yet measured |
 
 The original brief proposed ten tutorials; calibration was merged with connection (02), and resuming, loading and checkpoint management were merged into 07, because the project history did not contain enough material to fill them separately.

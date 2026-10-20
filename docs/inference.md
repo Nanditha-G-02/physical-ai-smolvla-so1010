@@ -72,7 +72,7 @@ Then in the web UI (`http://localhost`): select the inference page, the checkpoi
 |---|-------------|-----------|-----|-------|
 | 1 | Arm did not move | `bridge.py` was still running; the follower obeyed the leader arm | Stop teleoperation before inference | ✅ Fixed |
 | 2 | Arm hovered near rest, drifted toward the tray | Speed limit applied relative to **measured** position (2 units); servos lagged under gravity; the model saw a static arm | `inference_bridge.py` v2: limit relative to the commanded goal, plus a distance cap | ✅ Fixed |
-| 3 | Arm reached out, positioned the gripper over the cube, hovered without grasping | Suspected distribution shift: extra red cubes in view, different gripper-camera colour (auto white balance), short inference episode | Match conditions (below), then re-test | 🟡 Superseded: a later run is reported to complete pick and place; what changed is not recorded |
+| 3 | Arm reached out, positioned the gripper over the cube, hovered without grasping | Suspected distribution shift: extra red cubes in view, different gripper-camera colour (auto white balance), short inference episode | Match conditions (below), then re-test | 🟡 Superseded: a later run completed pick and place; what changed is not recorded |
 
 Possible contributing factors for attempt 3 (🟡 hypotheses, not tested):
 
