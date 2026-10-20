@@ -1,0 +1,80 @@
+# ---------- Secrets and credentials (never commit) ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*_token*
+*token.txt
+.huggingface/
+.cache/huggingface/
+hf_token*
+secrets/
+credentials*
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ---------- Environments ----------
+.venv/
+venv/
+env/
+.conda/
+
+# ---------- Datasets (link to the Hugging Face Hub instead) ----------
+data/
+datasets/
+*.parquet
+*.arrow
+*.hdf5
+*.h5
+*.zarr/
+
+# ---------- Video and large media ----------
+*.mp4
+*.avi
+*.mkv
+*.mov
+*.webm
+*.bag
+*.mcap
+*.db3
+
+# ---------- Model weights and checkpoints ----------
+outputs/
+checkpoints/
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.onnx
+wandb/
+
+# ---------- Logs and temporary files ----------
+*.log
+logs/
+tmp/
+*.tmp
+*.swp
+*~
+
+# ---------- OS / editors ----------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ---------- Allow small documentation images ----------
+!assets/**/*.png
+!assets/**/*.jpg
+!assets/**/*.svg

@@ -1,0 +1,14 @@
+flowchart LR
+    subgraph Inputs["ROS 2 topics (domain 30, Zenoh)"]
+        T1["/camera/color/image_raw/compressed"]
+        T2["/gripper_camera/color/image_raw/compressed"]
+        T3["/follower_joint_states"]
+        T4["/leader/joint_trajectory"]
+    end
+    CFG["s101_dataset_config.yaml<br/>topic to feature mapping"] --> SRV
+    Inputs --> SRV["physical_ai_server<br/>synchronize at 30 fps"]
+    UI["Web UI<br/>task text, episode length,<br/>start / stop / reset"] --> SRV
+    SRV --> EP["Per-episode files<br/>parquet + 2 MP4"]
+    EP --> META["meta/ info.json, stats,<br/>episodes, tasks"]
+    META --> PUSH["Push to Hub<br/>LeRobot v2.1"]
+    PUSH --> VIEW["Validate in<br/>dataset visualizer"]

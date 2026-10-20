@@ -1,0 +1,2 @@
+date,checkpoint,lerobot_version,instruction,wb_value,bridge_rate_limit,bridge_distance_cap,trial,position_set,cube_pos,tray_pos,grasp,place,score,drop,time_s,grasp_attempts,recovered,safety_stop,failure_mode,video,notes
+YYYY-MM-DD,run1/020000,container-bundled,"Move the SO-ARM101 follower arm to pick up an object from the starting position and place it at the target location. Perform the task smoothly and safely.",<value>,<units/tick>,<units>,1,ID,P1,T1,,,,,,,,,,,

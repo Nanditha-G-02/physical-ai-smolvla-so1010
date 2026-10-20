@@ -1,0 +1,335 @@
+% =====================================================================
+% Bibliography for physical-ai-smolvla-so101
+% Status key (in the "note" field):
+%   checked-online-2026-10-20 : title/ID/venue confirmed against arXiv,
+%                               the venue site or the official page this session
+%   well-established          : widely cited, identifiers given from the
+%                               author's knowledge; re-check before formal use
+% Peer-review status is given in "note" as well.
+% =====================================================================
+
+% ---------------- Core: the model and the library used ----------------
+
+@article{shukor2025smolvla,
+  title   = {{SmolVLA}: A Vision-Language-Action Model for Affordable and Efficient Robotics},
+  author  = {Shukor, Mustafa and Aubakirova, Dana and Capuano, Francesco and Kooijmans, Pepijn and Palma, Steven and Zouitine, Adil and Aractingi, Michel and Pascal, Caroline and Russi, Martino and Marafioti, Andres and Alibert, Simon and Cord, Matthieu and Wolf, Thomas and Cadene, Remi},
+  journal = {arXiv preprint arXiv:2506.01844},
+  year    = {2025},
+  url     = {https://arxiv.org/abs/2506.01844},
+  note    = {Preprint. checked-online-2026-10-20. The policy fine-tuned in this project.}
+}
+
+@inproceedings{cadene2026lerobot,
+  title     = {{LeRobot}: An Open-Source Library for End-to-End Robot Learning},
+  author    = {Cadene, Remi and others},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2026},
+  eprint    = {2602.22818},
+  archivePrefix = {arXiv},
+  doi       = {10.48550/arXiv.2602.22818},
+  url       = {https://arxiv.org/abs/2602.22818},
+  note      = {Peer-reviewed (ICLR 2026). checked-online-2026-10-20. The library used for datasets, training and inference.}
+}
+
+@misc{lerobot_repo,
+  title  = {{LeRobot}: State-of-the-art Machine Learning for Real-World Robotics in PyTorch},
+  author = {{Hugging Face}},
+  year   = {2024},
+  howpublished = {\url{https://github.com/huggingface/lerobot}},
+  note   = {Software repository. Version 0.6.2 used on the host.}
+}
+
+@misc{physical_ai_tools,
+  title  = {Physical {AI} Tools: Physical {AI} Development Interface with {LeRobot} and {ROS} 2},
+  author = {{ROBOTIS}},
+  year   = {2025},
+  howpublished = {\url{https://github.com/ROBOTIS-GIT/physical_ai_tools}},
+  note   = {Software repository (Apache-2.0). checked-online-2026-10-20. Used for recording, Run 1 training and inference.}
+}
+
+@misc{marafioti2025smolvlm,
+  title  = {{SmolVLM}: Redefining Small and Efficient Multimodal Models},
+  author = {Marafioti, Andres and others},
+  year   = {2025},
+  eprint = {2504.05299},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2504.05299},
+  note   = {Preprint. well-established. The VLM backbone of SmolVLA.}
+}
+
+% ---------------- VLAs and generalist policies ----------------
+
+@inproceedings{brohan2023rt1,
+  title     = {{RT-1}: Robotics Transformer for Real-World Control at Scale},
+  author    = {Brohan, Anthony and others},
+  booktitle = {Robotics: Science and Systems (RSS)},
+  year      = {2023},
+  eprint    = {2212.06817},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2212.06817},
+  note      = {Peer-reviewed (RSS 2023). well-established.}
+}
+
+@inproceedings{zitkovich2023rt2,
+  title     = {{RT-2}: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control},
+  author    = {Zitkovich, Brianna and Yu, Tianhe and others},
+  booktitle = {Conference on Robot Learning (CoRL), PMLR 229},
+  year      = {2023},
+  eprint    = {2307.15818},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2307.15818},
+  note      = {Peer-reviewed (CoRL 2023). well-established. The arXiv version lists Brohan et al.; the PMLR version lists Zitkovich, Yu et al.}
+}
+
+@inproceedings{oxe2024,
+  title     = {Open {X-Embodiment}: Robotic Learning Datasets and {RT-X} Models},
+  author    = {{Open X-Embodiment Collaboration}},
+  booktitle = {IEEE International Conference on Robotics and Automation (ICRA)},
+  year      = {2024},
+  eprint    = {2310.08864},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2310.08864},
+  note      = {Peer-reviewed (ICRA 2024). well-established.}
+}
+
+@inproceedings{octo2024,
+  title     = {Octo: An Open-Source Generalist Robot Policy},
+  author    = {{Octo Model Team}},
+  booktitle = {Robotics: Science and Systems (RSS)},
+  year      = {2024},
+  eprint    = {2405.12213},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2405.12213},
+  note      = {Peer-reviewed (RSS 2024). well-established.}
+}
+
+@inproceedings{kim2024openvla,
+  title     = {{OpenVLA}: An Open-Source Vision-Language-Action Model},
+  author    = {Kim, Moo Jin and Pertsch, Karl and Karamcheti, Siddharth and others},
+  booktitle = {Conference on Robot Learning (CoRL)},
+  year      = {2024},
+  eprint    = {2406.09246},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2406.09246},
+  note      = {Peer-reviewed (CoRL 2024). well-established.}
+}
+
+@misc{black2024pi0,
+  title  = {$\pi_0$: A Vision-Language-Action Flow Model for General Robot Control},
+  author = {Black, Kevin and others},
+  year   = {2024},
+  eprint = {2410.24164},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2410.24164},
+  note   = {Preprint (Physical Intelligence). well-established. Flow-matching action expert that SmolVLA builds on.}
+}
+
+% ---------------- Imitation learning and policy classes ----------------
+
+@inproceedings{zhao2023act,
+  title     = {Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware},
+  author    = {Zhao, Tony Z. and Kumar, Vikash and Levine, Sergey and Finn, Chelsea},
+  booktitle = {Robotics: Science and Systems (RSS)},
+  year      = {2023},
+  eprint    = {2304.13705},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2304.13705},
+  note      = {Peer-reviewed (RSS 2023). well-established. ACT and ALOHA; action chunking.}
+}
+
+@inproceedings{chi2023diffusion,
+  title     = {Diffusion Policy: Visuomotor Policy Learning via Action Diffusion},
+  author    = {Chi, Cheng and Feng, Siyuan and Du, Yilun and Xu, Zhenjia and Cousineau, Eric and Burchfiel, Benjamin and Song, Shuran},
+  booktitle = {Robotics: Science and Systems (RSS)},
+  year      = {2023},
+  eprint    = {2303.04137},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2303.04137},
+  note      = {Peer-reviewed (RSS 2023; extended version in IJRR 2024). well-established.}
+}
+
+@inproceedings{pomerleau1988alvinn,
+  title     = {{ALVINN}: An Autonomous Land Vehicle in a Neural Network},
+  author    = {Pomerleau, Dean A.},
+  booktitle = {Advances in Neural Information Processing Systems 1 (NIPS 1988)},
+  year      = {1989},
+  note      = {Peer-reviewed. well-established. Early behavioral cloning from images.}
+}
+
+@inproceedings{ross2010efficient,
+  title     = {Efficient Reductions for Imitation Learning},
+  author    = {Ross, St{\'e}phane and Bagnell, J. Andrew},
+  booktitle = {International Conference on Artificial Intelligence and Statistics (AISTATS)},
+  year      = {2010},
+  note      = {Peer-reviewed. well-established. Compounding-error analysis of behavioral cloning.}
+}
+
+@inproceedings{ross2011dagger,
+  title     = {A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning},
+  author    = {Ross, St{\'e}phane and Gordon, Geoffrey J. and Bagnell, J. Andrew},
+  booktitle = {International Conference on Artificial Intelligence and Statistics (AISTATS)},
+  year      = {2011},
+  eprint    = {1011.0686},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/1011.0686},
+  note      = {Peer-reviewed. well-established. DAgger.}
+}
+
+@inproceedings{mandlekar2021robomimic,
+  title     = {What Matters in Learning from Offline Human Demonstrations for Robot Manipulation},
+  author    = {Mandlekar, Ajay and Xu, Danfei and Wong, Josiah and Nasiriany, Soroush and Wang, Chen and Kulkarni, Rohun and Fei-Fei, Li and Savarese, Silvio and Zhu, Yuke and Mart{\'i}n-Mart{\'i}n, Roberto},
+  booktitle = {Conference on Robot Learning (CoRL)},
+  year      = {2021},
+  eprint    = {2108.03298},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2108.03298},
+  note      = {Peer-reviewed. well-established. robomimic; demonstration quality.}
+}
+
+@article{levine2016endtoend,
+  title   = {End-to-End Training of Deep Visuomotor Policies},
+  author  = {Levine, Sergey and Finn, Chelsea and Darrell, Trevor and Abbeel, Pieter},
+  journal = {Journal of Machine Learning Research},
+  volume  = {17},
+  number  = {39},
+  pages   = {1--40},
+  year    = {2016},
+  eprint  = {1504.00702},
+  archivePrefix = {arXiv},
+  note    = {Peer-reviewed. well-established.}
+}
+
+% ---------------- Generative modelling and fine-tuning ----------------
+
+@inproceedings{lipman2023flow,
+  title     = {Flow Matching for Generative Modeling},
+  author    = {Lipman, Yaron and Chen, Ricky T. Q. and Ben-Hamu, Heli and Nickel, Maximilian and Le, Matt},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2023},
+  eprint    = {2210.02747},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2210.02747},
+  note      = {Peer-reviewed. well-established. The training objective of the SmolVLA action expert.}
+}
+
+@inproceedings{hu2022lora,
+  title     = {{LoRA}: Low-Rank Adaptation of Large Language Models},
+  author    = {Hu, Edward J. and Shen, Yelong and Wallis, Phillip and Allen-Zhu, Zeyuan and Li, Yuanzhi and Wang, Shean and Wang, Lu and Chen, Weizhu},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2022},
+  eprint    = {2106.09685},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2106.09685},
+  note      = {Peer-reviewed. well-established.}
+}
+
+% ---------------- Data, generalization and evaluation ----------------
+
+@inproceedings{lin2025scaling,
+  title     = {Data Scaling Laws in Imitation Learning for Robotic Manipulation},
+  author    = {Lin, Fanqi and Hu, Yingdong and Sheng, Pingyue and Wen, Chuan and You, Jiacheng and Gao, Yang},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2025},
+  eprint    = {2410.18647},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/2410.18647},
+  note      = {Peer-reviewed (ICLR 2025, oral). checked-online-2026-10-20.}
+}
+
+@misc{kressgazit2024empirical,
+  title  = {Robot Learning as an Empirical Science: Best Practices for Policy Evaluation},
+  author = {Kress-Gazit, Hadas and Hashimoto, Kunimatsu and Kuppuswamy, Naveen and Shah, Paarth and Horgan, Phoebe and Richardson, Gordon and Feng, Siyuan and Burchfiel, Benjamin},
+  year   = {2024},
+  eprint = {2409.09491},
+  archivePrefix = {arXiv},
+  doi    = {10.48550/arXiv.2409.09491},
+  url    = {https://arxiv.org/abs/2409.09491},
+  note   = {arXiv preprint. checked-online-2026-10-20.}
+}
+
+@misc{step2025,
+  title  = {Is Your Imitation Learning Policy Better than Mine? Policy Comparison with Near-Optimal Stopping},
+  year   = {2025},
+  eprint = {2503.10966},
+  archivePrefix = {arXiv},
+  url    = {https://arxiv.org/abs/2503.10966},
+  note   = {arXiv preprint (Toyota Research Institute, Princeton). checked-online-2026-10-20 (title and ID); full author list not confirmed here.}
+}
+
+@inproceedings{tobin2017domain,
+  title     = {Domain Randomization for Transferring Deep Neural Networks from Simulation to the Real World},
+  author    = {Tobin, Josh and Fong, Rachel and Ray, Alex and Schneider, Jonas and Zaremba, Wojciech and Abbeel, Pieter},
+  booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year      = {2017},
+  eprint    = {1703.06907},
+  archivePrefix = {arXiv},
+  note      = {Peer-reviewed. well-established. Sim-to-real.}
+}
+
+% ---------------- Robotics foundations ----------------
+
+@article{zhang2000calibration,
+  title   = {A Flexible New Technique for Camera Calibration},
+  author  = {Zhang, Zhengyou},
+  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  volume  = {22},
+  number  = {11},
+  pages   = {1330--1334},
+  year    = {2000},
+  doi     = {10.1109/34.888718},
+  note    = {Peer-reviewed. well-established.}
+}
+
+@article{macenski2022ros2,
+  title   = {Robot Operating System 2: Design, Architecture, and Uses in the Wild},
+  author  = {Macenski, Steven and Foote, Tully and Gerkey, Brian and Lalancette, Chris and Woodall, William},
+  journal = {Science Robotics},
+  volume  = {7},
+  number  = {66},
+  year    = {2022},
+  doi     = {10.1126/scirobotics.abm6074},
+  note    = {Peer-reviewed. well-established.}
+}
+
+@article{brooks1991intelligence,
+  title   = {Intelligence Without Representation},
+  author  = {Brooks, Rodney A.},
+  journal = {Artificial Intelligence},
+  volume  = {47},
+  number  = {1--3},
+  pages   = {139--159},
+  year    = {1991},
+  doi     = {10.1016/0004-3702(91)90053-M},
+  note    = {Peer-reviewed. well-established. Embodied AI.}
+}
+
+@book{pfeifer2006body,
+  title     = {How the Body Shapes the Way We Think: A New View of Intelligence},
+  author    = {Pfeifer, Rolf and Bongard, Josh},
+  publisher = {MIT Press},
+  year      = {2006},
+  note      = {Book. well-established. Embodied cognition.}
+}
+
+% ---------------- Official documentation ----------------
+
+@misc{lerobot_docs_smolvla,
+  title  = {{SmolVLA} -- {LeRobot} documentation},
+  author = {{Hugging Face}},
+  howpublished = {\url{https://huggingface.co/docs/lerobot/smolvla}},
+  note   = {Official documentation. checked-online-2026-10-20. Recommends about 50 episodes; fine-tuning and lerobot-rollout commands.}
+}
+
+@misc{lerobot_docs_dataset_v3,
+  title  = {{LeRobotDataset} v3.0 -- {LeRobot} documentation},
+  author = {{Hugging Face}},
+  howpublished = {\url{https://huggingface.co/docs/lerobot/lerobot-dataset-v3}},
+  note   = {Official documentation. checked-online-2026-10-20. v3.0 layout and v2.1 to v3.0 migration.}
+}
+
+@misc{so_arm100,
+  title  = {{SO-ARM100} and {SO-ARM101}: Standard Open Arm},
+  author = {{TheRobotStudio}},
+  howpublished = {\url{https://github.com/TheRobotStudio/SO-ARM100}},
+  note   = {Hardware design repository.}
+}

@@ -1,0 +1,54 @@
+cff-version: 1.2.0
+message: "If you use this documentation or its scripts, please cite it as below."
+title: "Physical AI with SmolVLA on the SO-ARM101: an end-to-end imitation learning project"
+abstract: >-
+  Documentation, research notes, tutorials and experiment records for fine-tuning
+  the SmolVLA vision-language-action model on teleoperated pick-and-place
+  demonstrations collected with an SO-ARM101 arm, ROS 2 Jazzy, ROBOTIS Physical AI
+  Tools and LeRobot.
+type: software
+authors:
+  - given-names: Nanditha
+    family-names: G
+date-released: 2026-10-20
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/Nanditha-G-02/physical-ai-smolvla-so101"
+keywords:
+  - physical AI
+  - vision-language-action
+  - SmolVLA
+  - LeRobot
+  - SO-ARM101
+  - imitation learning
+  - ROS 2
+references:
+  - type: article
+    title: "SmolVLA: A Vision-Language-Action Model for Affordable and Efficient Robotics"
+    authors:
+      - family-names: Shukor
+        given-names: Mustafa
+      - name: "et al."
+    year: 2025
+    identifiers:
+      - type: other
+        value: "arXiv:2506.01844"
+  - type: conference-paper
+    title: "LeRobot: An Open-Source Library for End-to-End Robot Learning"
+    authors:
+      - family-names: Cadene
+        given-names: Remi
+      - name: "et al."
+    year: 2026
+    conference:
+      name: "International Conference on Learning Representations (ICLR)"
+    identifiers:
+      - type: other
+        value: "arXiv:2602.22818"
+  - type: data
+    title: "s101_dataset_pick_and_place"
+    authors:
+      - given-names: Nanditha
+        family-names: G
+    year: 2026
+    url: "https://huggingface.co/datasets/NandithaaaG/s101_dataset_pick_and_place"

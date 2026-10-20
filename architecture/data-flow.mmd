@@ -1,0 +1,33 @@
+flowchart LR
+    subgraph OBS["Observation at time t"]
+        I1["Scene image<br/>720x1280"]
+        I2["Gripper image<br/>480x640"]
+        S["Joint state<br/>6 values"]
+        TXT["Instruction text"]
+    end
+
+    subgraph PRE["Pre-processing"]
+        RS["Resize with padding<br/>to 512x512"]
+        NS["Normalize state<br/>mean / std"]
+        TK["Tokenize<br/>max 48 tokens"]
+    end
+
+    subgraph POL["SmolVLA"]
+        VLM["SmolVLM-2 (first 16 LLM layers)<br/>frozen"]
+        AE["Action expert<br/>flow matching, 10 steps"]
+    end
+
+    I1 --> RS
+    I2 --> RS
+    S --> NS
+    TXT --> TK
+    RS --> VLM
+    NS --> VLM
+    TK --> VLM
+    VLM --> AE
+    AE --> CH["Action chunk<br/>50 x 6"]
+    CH --> UN["Un-normalize<br/>mean / std"]
+    UN --> Q["Execute up to 50 steps<br/>n_action_steps = 50"]
+    Q --> IB["inference_bridge.py"]
+    IB --> ARM["Follower servos"]
+    ARM -. "new state and images" .-> OBS

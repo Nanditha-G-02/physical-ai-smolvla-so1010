@@ -1,0 +1,31 @@
+name: docs-check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Relative links and anchors
+        run: python scripts/check_links.py
+
+      - name: Secret and large-file scan
+        run: python scripts/scan_secrets.py
+
+      - name: Scripts compile
+        run: python -m py_compile scripts/*.py
+
+      - name: Training config is valid JSON
+        run: python -m json.tool experiments/training-configs/run1_container_train_config.json > /dev/null

@@ -1,0 +1,42 @@
+flowchart TB
+    subgraph HW["Hardware"]
+        LA["Leader SO-ARM101<br/>6x STS3215"]
+        FA["Follower SO-ARM101<br/>6x STS3215"]
+        FB["Orbbec Femto Bolt<br/>colour 1280x720"]
+        GC["Gripper USB camera<br/>640x480"]
+        GPU["RTX 3050 6 GB"]
+    end
+
+    subgraph DOCK["Docker: ROBOTIS Physical AI Tools (ROS 2 Jazzy, Zenoh, domain 30)"]
+        V4L["v4l2_camera nodes<br/>start_cameras.sh"]
+        BR["bridge.py<br/>teleoperation"]
+        IBR["inference_bridge.py<br/>policy to servos"]
+        SRV["physical_ai_server<br/>record / train / infer"]
+        UI["physical_ai_manager<br/>web UI at localhost"]
+        LR1["LeRobot (bundled)<br/>dataset v2.1"]
+    end
+
+    subgraph HOST["Host: conda env lerobot"]
+        LR2["LeRobot 0.6.2<br/>dataset v3.0"]
+        TR["lerobot-train"]
+        RO["lerobot-rollout<br/>(planned)"]
+    end
+
+    HUB[("Hugging Face Hub<br/>NandithaaaG/s101_dataset_pick_and_place")]
+
+    LA -- "USB serial" --> BR
+    BR -- "USB serial" --> FA
+    FB --> V4L
+    GC --> V4L
+    V4L --> SRV
+    BR --> SRV
+    UI <--> SRV
+    SRV --> LR1
+    LR1 -- "push v2.1" --> HUB
+    HUB -- "download, convert to v3.0" --> LR2
+    LR2 --> TR
+    TR --> GPU
+    SRV --> GPU
+    SRV -- "actions" --> IBR
+    IBR -- "USB serial" --> FA
+    RO -. "planned: direct serial + cameras" .-> FA

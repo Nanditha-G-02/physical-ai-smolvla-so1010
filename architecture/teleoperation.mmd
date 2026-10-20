@@ -1,0 +1,19 @@
+sequenceDiagram
+    autonumber
+    participant H as Human operator
+    participant L as Leader arm (torque off)
+    participant B as bridge.py
+    participant F as Follower arm (torque on)
+    participant R as ROS 2 topics
+
+    H->>L: Moves the arm by hand
+    loop Every control tick
+        B->>L: Read 6 joint positions (serial)
+        L-->>B: Positions
+        B->>F: Write goal positions (serial)
+        B->>F: Read measured positions
+        F-->>B: Positions
+        B->>R: /leader/joint_trajectory (action)
+        B->>R: /follower_joint_states (state)
+    end
+    Note over R: Physical AI Tools records both topics with the camera images

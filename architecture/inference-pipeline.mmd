@@ -1,0 +1,17 @@
+flowchart LR
+    subgraph ROS["ROS 2 (container, domain 30)"]
+        CAM1["/camera/color/..."]
+        CAM2["/gripper_camera/color/..."]
+        JS["/follower_joint_states"]
+    end
+    CAM1 --> PS["physical_ai_server<br/>inference mode"]
+    CAM2 --> PS
+    JS --> PS
+    TASK["Instruction text<br/>(same as recording)"] --> PS
+    PS --> POL["SmolVLA checkpoint<br/>GPU"]
+    POL -- "action chunk" --> PS
+    PS -- "/leader/joint_trajectory" --> IB["inference_bridge.py"]
+    IB --> SAFE{"Safety layer"}
+    SAFE -- "rate-limited goal" --> SERVO["Follower servos"]
+    SAFE -- "command timeout" --> HOLD["Hold position"]
+    SERVO --> JS

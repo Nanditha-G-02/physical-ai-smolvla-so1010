@@ -1,0 +1,15 @@
+flowchart LR
+    H1["Hardware bring-up<br/>motors, USB"] --> H2["Cameras<br/>stable names"]
+    H2 --> H3["Teleop bridge<br/>bridge.py"]
+    H3 --> D1["Record demos<br/>Physical AI Tools"]
+    D1 --> D2["Validate in viewer<br/>push to Hub"]
+    D2 --> T1["Run 1: train in container"]
+    D2 --> T2["Convert v2.1 to v3.0"]
+    T2 --> T3["Run 2: train on host"]
+    T1 --> E1["Offline check"]
+    E1 --> I1["Real-robot inference<br/>inference_bridge.py"]
+    T3 -.-> E2["Offline check (pending)"]
+    E2 -.-> I2["lerobot-rollout (planned)"]
+    I1 --> EV["Evaluation protocol (planned)"]
+    I2 -.-> EV
+    EV -.-> D1

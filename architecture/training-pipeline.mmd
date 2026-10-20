@@ -1,0 +1,10 @@
+flowchart TB
+    DS[("LeRobot dataset<br/>39 episodes, 30 fps")] --> DL["DataLoader<br/>batch 2 (Run 1) / 4 (Run 2)<br/>2 workers, pyav decoding"]
+    DL --> PRE["Pre-processing<br/>resize+pad 512x512<br/>normalize state/action (mean, std)<br/>tokenize instruction"]
+    PRE --> VLM["SmolVLM-2 backbone<br/>16 LLM layers, frozen"]
+    VLM --> AE["Action expert<br/>~100M trainable params"]
+    NOISE["Gaussian noise + time tau"] --> AE
+    AE --> LOSS["Flow-matching loss<br/>predicted vs target velocity"]
+    LOSS --> OPT["AdamW lr 1e-4<br/>cosine schedule, warmup 1000<br/>grad clip 10"]
+    OPT --> AE
+    OPT --> CK["Checkpoint every 2000 steps<br/>pretrained_model + training_state"]
